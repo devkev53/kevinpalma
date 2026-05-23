@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router'
+import { HashRouter, Routes, Route } from 'react-router'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
@@ -12,13 +12,13 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouterr>
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/example' element={<Example/>} />
           <Route path='*' element={<h1>Not Found</h1>} />
         </Routes>
-      </BrowserRouter>
+      </HashRouterr>
       {/* <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
