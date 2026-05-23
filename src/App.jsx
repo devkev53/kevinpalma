@@ -1,18 +1,25 @@
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
-import './App.css'
 
 import {Home} from './components/Home'
+import {Example} from './pages/Example'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Home/>
-      <section id="center">
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/example' element={<Example/>} />
+          <Route path='*' element={<h1>Not Found</h1>} />
+        </Routes>
+      </BrowserRouter>
+      {/* <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
           <img src={reactLogo} className="framework" alt="React logo" />
@@ -117,7 +124,7 @@ function App() {
       </section>
 
       <div className="ticks"></div>
-      <section id="spacer"></section>
+      <section id="spacer"></section> */}
     </>
   )
 }
