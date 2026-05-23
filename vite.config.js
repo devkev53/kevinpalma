@@ -4,6 +4,5 @@ import react from "@vitejs/plugin-react";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // base: "https://devkev53.github.io/kevinpalma",
-  base: "https://devkev53.github.io/",
+  base: "https://devkev53.github.io/kevinpalma",
 });
